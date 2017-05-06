@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/minireset.css/0.0.2/minireset.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+    $youziku.load("body", "72719022ab59492a8c8cdebda7780623", "Source-Han-Normal");
+    /*$youziku.load("#id1,.class1,h1", "72719022ab59492a8c8cdebda7780623", "Source-Han-Normal");*/
+    /*．．．*/
+    $youziku.draw();
+</script>
+
+<div class="table-title">
+    <h4>新建栏目</h4>
+</div>
+<form action="#">
+    <div class="col-md-6">
+        <div class="panel blue-border">
+            <div class="panel-title">
+                <h5>基本信息</h5>
+            </div>
+            <div class="panel-body">
+                <div class="form-group-block">
+                    <label>栏目名称 <i>*</i></label>
+                    <input type="text" id="exampleInputEmail1" placeholder="栏目名称">
+                </div>
+                <div class="form-group-block">
+                    <label>上级目录 <i>*</i></label>
+                    <select name="pid" id="pid">
+                        <option value="0" selected>无</option>
+                        <option value="1">吃饭</option>
+                        <option value="2">睡觉</option>
+                        <option value="3">打豆豆</option>
+                    </select>
+                </div>
+                <div class="form-group-block">
+                    <label>所属类型 <i>*</i></label>
+                    <select name="pid" id="pid">
+                        <option value="0" selected>文章类型</option>
+                        <option value="1">单页模型</option>
+                        <option value="2">下载模型</option>
+                    </select>
+                </div>
+                <div class="form-group-block">
+                    <label>栏目图片 <i>*</i></label>
+                    <div class="form-group-merge">
+                        <input type="text" value="">
+                        <button class="btn edit">上传</button>
+                    </div>
+                </div>
+                <div class="form-group-block">
+                    <label>栏目描述</label>
+                    <textarea name="desc" id="" rows="4" placeholder="栏目描述"></textarea>
+                </div>
+            </div>
+            <div class="form-group-block">
+                <label>栏目排序</label>
+                <input type="text" id="" placeholder="栏目排序">
+            </div>
+            <div class="form-group-block">
+                <label>显示位置 <i>*</i></label>
+                <select name="pid" id="pid">
+                    <option value="0" selected>是</option>
+                    <option value="1">否</option>
+                </select>
+                <!--<label class="checkbox"><input type="checkbox" placeholder="栏目排序"> 搜索结果 </label>-->
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel blue-border">
+            <div class="panel-title">
+                <h5>模版设置</h5>
+            </div>
+            <div class="panel-body">
+                <div class="form-group-block">
+                    <label>首页模版</label>
+                    <input type="text" id="exampleInputEmail1" placeholder="首页模版">
+                </div>
+                <div class="form-group-block">
+                    <label>列表页模版</label>
+                    <input type="text" id="exampleInputEmail1" placeholder="列表页模版">
+                </div>
+                <div class="form-group-block">
+                    <label>内容页模版</label>
+                    <input type="text" id="exampleInputEmail1" placeholder="内容页模版">
+                </div>
+            </div>
+            <br>
+            <div class="panel-title">
+                <h5>SEO优化</h5>
+            </div>
+            <div class="form-group-block">
+                <label>url优化</label>
+                <input type="text" id="exampleInputEmail1" placeholder="url优化">
+            </div>
+            <div class="form-group-block">
+                <label>关键词</label>
+                <input type="text" id="exampleInputEmail1" placeholder="关键词">
+            </div>
+            <div class="form-group-block">
+                <label>描述</label>
+                <input type="text" id="exampleInputEmail1" placeholder="描述">
+            </div>
+            <div class="form-group-block">
+                <label>备注</label>
+                <input type="text" id="exampleInputEmail1" placeholder="备注,为了排版">
+            </div>
+        </div>
+    </div>
+    <button class="btn red xl">保存</button>
+    <button class="btn edit xl">重置</button>
+</form>
+</body>
+</html>
