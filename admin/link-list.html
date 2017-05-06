@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="roseport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/minireset.css/0.0.2/minireset.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+</head>
+<body>
+
+    <script type="text/javascript">
+        $youziku.load("body", "72719022ab59492a8c8cdebda7780623", "Source-Han-Normal");
+        /*$youziku.load("#id1,.class1,h1", "72719022ab59492a8c8cdebda7780623", "Source-Han-Normal");*/
+        /*．．．*/
+        $youziku.draw();
+    </script>
+
+    <div class="table-title">
+        <h4>友情链接管理</h4>
+    </div>
+
+    <div class="table-function col-md-10">
+        <a href="add-category.html" class="botton btn blue pull-left">新建友情链接</a>
+    </div>
+    <table class="table-body col-md-12">
+        <thead>
+        <tr>
+            <th><input type="checkbox" class="celectAll"> 全选</th>
+            <th>id</th>
+            <th class="content-title">连接标题</th>
+            <th>连接</th>
+            <th>图标</th>
+            <th width="5%">排序</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" class="celect-item"></td>
+                <td>1</td>
+                <td class="content-title">百度</td>
+                <td>www.baidu.com</td>
+                <td><a href="#"><img src="https://www.baidu.com/img/baidu_jgylogo3.gif" alt=""></a></td>
+                <td><input class="order" type="text" value="1"></td>
+                <td>
+                    <a href="#" class="btn rose" value="">查看</a>
+                    <a href="#" class="btn blue" value="">编辑</a>
+                    <a href="#" class="btn yellow" value="">删除</a>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="copy-move" colspan="4">
+                    <div class="form-group-inline">
+                        <a class="gery" href="#">删除</a>
+                    </div>
+                </td>
+                <td colspan="3" class="total">
+                    共计 310 条数据 每页 15条 数据
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li class="active"><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

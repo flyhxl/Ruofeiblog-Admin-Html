@@ -6,9 +6,12 @@
 @black: #253139;
 @sblack: #374850;
 @sgory: #e0cfd7;
-@btn-edit: #36b6d6;
-@btn-delete: #eba429;
-@btn-view: #e74481;
+
+@btn-blue: #36b6d6;
+@btn-yellow: #eba429;
+@btn-rose: #e74481;
+@btn-gery: #fff;
+@btn-black: @black;
 
 @font-face {font-family: "iconfont";
   src: url('../fonts/iconfont.eot'); /* IE9*/
@@ -61,6 +64,12 @@ a,a:hover,a:before,a:visited{
   h3{
     font-size: 1.5em;
   }
+}
+.pull-left{
+  float: left;
+}
+.pull-right{
+  float: right;
 }
 .admin-iframe{
   position: absolute;
@@ -200,12 +209,12 @@ input.order{
 button.xl{
   padding: 5px 8px*3;
 }
-button.edit,a.edit{
-  border:1px solid @btn-edit;
-  background: @btn-edit;
+button.blue,a.blue{
+  border:1px solid @btn-blue;
+  background: @btn-blue;
   &:hover{
-    background: @btn-edit / 1.2;
-    border:1px solid @btn-edit * 1.2;
+    background: @btn-blue / 1.2;
+    border:1px solid @btn-blue * 1.2;
   }
 }
 button.red,a.red{
@@ -216,20 +225,38 @@ button.red,a.red{
     border:1px solid @sred * 1.2;
   }
 }
-button.view,a.view{
-  border:1px solid @btn-view;
-  background: @btn-view;
+button.rose,a.rose{
+  border:1px solid @btn-rose;
+  background: @btn-rose;
   &:hover{
-    background: @btn-view / 1.2;
-    border:1px solid @btn-view * 1.2;
+    background: @btn-rose / 1.2;
+    border:1px solid @btn-rose * 1.2;
   }
 }
-button.delete,a.delete{
-  border:1px solid @btn-delete;
-  background: @btn-delete;
+button.yellow,a.yellow{
+  border:1px solid @btn-yellow;
+  background: @btn-yellow;
   &:hover{
-    background: @btn-delete / 1.2;
-    border:1px solid @btn-delete * 1.2;
+    background: @btn-yellow / 1.2;
+    border:1px solid @btn-yellow * 1.2;
+  }
+}
+button.gery,a.gery{
+  border:1px solid @btn-gery / 1.2;
+  background: @btn-gery;
+  color: @black;
+  padding: 6px 8px;
+  &:hover{
+    background: @btn-gery / 1.2;
+    border:1px solid @btn-gery;
+  }
+}
+button.black,a.black{
+  border:1px solid @btn-black;
+  background: @btn-black;
+  &:hover{
+    background: @btn-black / 1.2;
+    border:1px solid @btn-black * 1.2;
   }
 }
 .btn,a.btn{
@@ -239,6 +266,13 @@ button.delete,a.delete{
   line-height: 20px;
 }
 /* form */
+input,select,textarea,checkbox{
+  outline:none;
+  border: 1px solid #aaaaaa;
+  &:focus{
+    border: 1px solid @sred;
+  }
+}
 .form-group-block {
   margin-bottom: 15px;
   label{
@@ -247,12 +281,7 @@ button.delete,a.delete{
       color: @sred;
     }
   }
-  input,select,textarea,checkbox{
-    outline:none;
-    &:focus{
-      border: 1px solid @sred;
-    }
-  }
+
   input{
     line-height: 28px;
     height: 30px;
@@ -273,10 +302,11 @@ button.delete,a.delete{
   }
 }
 .form-group-inline {
-  margin-bottom: 15px;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
   label{
     margin-bottom: 3px;
-    width: 120px;
     display: inline-block;
     text-align: right;
     i{
@@ -291,6 +321,10 @@ button.delete,a.delete{
     &:focus{
       border: 1px solid @sred;
     }
+  }
+  select{
+    height: 30px;
+    padding: 2px 5px;
   }
 
 }
@@ -432,7 +466,7 @@ button.delete,a.delete{
   }
   li.selected{
     a{
-      border-bottom: 2px solid @btn-edit;
+      border-bottom: 2px solid @btn-blue;
     }
   }
 }
@@ -465,7 +499,7 @@ button.delete,a.delete{
   }
 }
 .blue-border{
-  border-left: 3px solid @btn-edit;
+  border-left: 3px solid @btn-blue;
 }
 .welcome{
   margin-bottom: 30px;
@@ -556,7 +590,7 @@ aside{
       padding: 6px 25px;
       background-color: #FFF;
       &:hover{
-        background-color: @white;
+        background-color: @black;
         a{
           color: #fff;
         }
@@ -592,5 +626,8 @@ footer{
   }
 }
 td.content-title{
+  text-align: left;
+}
+td.copy-move{
   text-align: left;
 }
