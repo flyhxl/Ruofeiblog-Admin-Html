@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/minireset.css/0.0.2/minireset.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+
+    <script type="text/javascript" charset="utf-8" src="../plus/UEditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../plus/UEditor/ueditor.all.min.js"> </script>
+    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+    <script type="text/javascript" charset="utf-8" src="../plus/UEditor/lang/zh-cn/zh-cn.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+    $youziku.load("body", "72719022ab59492a8c8cdebda7780623", "Source-Han-Normal");
+    /*$youziku.load("#id1,.class1,h1", "72719022ab59492a8c8cdebda7780623", "Source-Han-Normal");*/
+    /*．．．*/
+    $youziku.draw();
+</script>
+
+<div class="table-title">
+    <h4>新建内容</h4>
+</div>
+<form action="#">
+    <div class="col-md-4" style="padding-right: 20px;">
+        <div class="panel blue-border">
+            <div class="panel-title">
+                <h5>基本信息</h5>
+            </div>
+            <div class="panel-body">
+                <div class="form-group-block">
+                    <label>文章标题 <i>*</i></label>
+                    <input type="text" id="exampleInputEmail1" placeholder="栏目名称">
+                </div>
+                <div class="form-group-block">
+                    <label>栏目 <i>*</i></label>
+                    <select name="pid" id="pid">
+                        <option value="0" selected>无</option>
+                        <option value="1">吃饭</option>
+                        <option value="2">睡觉</option>
+                        <option value="3">打豆豆</option>
+                    </select>
+                </div>
+                <div class="form-group-block">
+                    <label>文章缩略图 <i>*</i></label>
+                    <div class="form-group-merge">
+                        <input type="text" value="">
+                        <button class="btn blue">上传</button>
+                    </div>
+                </div>
+                <div class="form-group-block">
+                    <label>文章描述</label>
+                    <textarea name="desc" rows="4" placeholder="栏目描述"></textarea>
+                </div>
+            </div>
+            <div class="form-group-block">
+                <label>文章热度</label>
+                <input type="text" id="" placeholder="栏目排序">
+            </div>
+            <div class="form-group-block">
+                <label>文章排序</label>
+                <input type="text" id="" placeholder="栏目排序">
+            </div>
+            <div class="form-group-block">
+                <label>是否发布 <i>*</i></label>
+                <select name="pid" id="pid">
+                    <option value="0" selected>发布</option>
+                    <option value="1">草稿</option>
+                </select>
+            </div>
+            <div class="panel-title">
+                <h5>SEO优化</h5>
+            </div>
+            <div class="form-group-block">
+                <label>关键词</label>
+                <input type="text" id="exampleInputEmail1" placeholder="关键词">
+            </div>
+            <div class="form-group-block">
+                <label>描述</label>
+                <input type="text" id="exampleInputEmail1" placeholder="描述">
+            </div>
+
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="panel blue-border">
+            <div class="panel-title">
+                <h5>内容</h5>
+            </div>
+
+            <script id="editor" type="text/plain" style="width:100%;height:500px;"></script>
+
+        </div>
+    </div>
+    <div class="col-md-4">
+        <button class="btn red xl">保存</button>
+        <button class="btn blue xl">重置</button>
+    </div>
+
+</form>
+
+<script>
+    UE.getEditor('editor');
+</script>
+</body>
+</html>

@@ -10,14 +10,12 @@
     <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
 </head>
 <body>
-
-<script type="text/javascript">
-    $youziku.load("body", "72719022ab59492a8c8cdebda7780623", "Source-Han-Normal");
-    /*$youziku.load("#id1,.class1,h1", "72719022ab59492a8c8cdebda7780623", "Source-Han-Normal");*/
-    /*．．．*/
-    $youziku.draw();
-</script>
-
+    <script type="text/javascript">
+        $youziku.load("body", "72719022ab59492a8c8cdebda7780623", "Source-Han-Normal");
+        /*$youziku.load("#id1,.class1,h1", "72719022ab59492a8c8cdebda7780623", "Source-Han-Normal");*/
+        /*．．．*/
+        $youziku.draw();
+    </script>
     <header>
         <a href="#">ruofeiblog.com</a>
     </header>
@@ -38,6 +36,7 @@
                 </ul>
             </li>
             <li><a href="admin/link-list.html" target="main"><i class="iconfont">&#xe682;</i> 友情连接</a></li>
+            <li class="hideMunu"><a href="#" onClick="hideMunu();"><i class="iconfont">&#xe62e;</i> 隐藏菜单</a></li>
         </nav>
     </aside>
     <div class="subMunu">
@@ -56,11 +55,31 @@
             </li>
         </ul>
     </div>
-    <article>
-            <iframe class="admin-iframe" name="main" src="admin/index.html"></iframe>
+    <article style="">
+        <a href="#" style="display: none" class="showMunu" onClick="showMunu();"><i class="iconfont">&#xe600;</i> 显示菜单</a>
+        <iframe class="admin-iframe" name="main" src="admin/index.html"></iframe>
     </article>
     <footer>
         <p><a href="#">2016 © Ruofeiblog.com</a></p>
     </footer>
+    <script>
+        var munu = document.getElementsByTagName('nav'),
+            sidebar = document.getElementsByTagName('aside'),
+            article = document.getElementsByTagName('article'),
+            show = document.getElementsByClassName('showMunu');
+        function hideMunu()
+        {
+            munu[0].style.left = '-240px';
+            sidebar[0].style.left = '-240px';
+            article[0].style.left = '0';
+            show[0].style.display = 'inline-block';
+        }
+        function showMunu() {
+            munu[0].style.left = '0px';
+            sidebar[0].style.left = '0px';
+            article[0].style.left = '240px';
+            show[0].style.display = 'none';
+        }
+    </script>
 </body>
 </html>

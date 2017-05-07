@@ -504,6 +504,15 @@ input,select,textarea,checkbox{
 .welcome{
   margin-bottom: 30px;
 }
+#markdown-body{
+  border: 1px solid #eee;
+  overflow-y: scroll;
+  width: 100%;
+  padding: 10px;
+  .demo{
+    color: @gery;
+  }
+}
 header{
   position: fixed;
   width: 100%;
@@ -562,8 +571,9 @@ aside{
     }
     ul{
       li{
-        background-color: @black;
+        background-color: @sblack;
         &:hover{
+          background-color: @black;
           a{
             color: @sred !important;
           }
@@ -579,11 +589,38 @@ aside{
     }
   }
 }
+
+.hideMunu{
+  line-height: 30px;
+  &:hover{
+    a{
+      color:#fff;
+    }
+  }
+  a{
+    text-align: right;
+    padding-right: 40px;
+    background: @sred;
+    color: #fff;
+  }
+}
+.showMunu{
+  position: absolute;
+  top:auto;
+  bottom: 30%;
+  left: 0px;
+  padding: 5px;
+  background: @sred;
+  z-index: 100;
+  width: 25px;
+  color:#fff;
+}
 .subMunu{
   position: absolute;
   top:60px;
   right:40px;
   z-index: 100;
+
   ul{
     li{
       float: left;
