@@ -67,19 +67,19 @@
     </ul>
     <table class="table-body col-md-10">
         <thead>
-        <tr>
-            <th><input type="checkbox" class="celectAll"> 全选</th>
-            <th>id</th>
-            <th class="content-title" width="30%">内容标题</th>
-            <th>热度</th>
-            <th>是否显示</th>
-            <th width="5%">排序</th>
-            <th>操作</th>
-        </tr>
+            <tr>
+                <th><label><input type="checkbox" class="select-item selectAll"> 全选</label></th>
+                <th>id</th>
+                <th class="content-title" width="30%">内容标题</th>
+                <th>热度</th>
+                <th>是否显示</th>
+                <th width="5%">排序</th>
+                <th>操作</th>
+            </tr>
         </thead>
-        <tbody>
+        <tbody class="content-body">
             <tr>
-                <td><input type="checkbox" class="celect-item"></td>
+                <td><input type="checkbox" name="1" class="select-item"></td>
                 <td>1</td>
                 <td class="content-title">详解CSS中:nth-child的用法-大前端</td>
                 <td>255</td>
@@ -92,7 +92,7 @@
                 </td>
             </tr>
             <tr>
-                <td><input type="checkbox" class="celect-item"></td>
+                <td><input type="checkbox" name="2" class="select-item"></td>
                 <td>1</td>
                 <td class="content-title">详解CSS中:nth-child的用法-大前端</td>
                 <td>255</td>
@@ -105,7 +105,7 @@
                 </td>
             </tr>
             <tr>
-                <td><input type="checkbox" class="celect-item"></td>
+                <td><input type="checkbox" name="3" class="select-item"></td>
                 <td>1</td>
                 <td class="content-title">详解CSS中:nth-child的用法-大前端</td>
                 <td>255</td>
@@ -118,7 +118,7 @@
                 </td>
             </tr>
             <tr>
-                <td><input type="checkbox" class="celect-item"></td>
+                <td><input type="checkbox" name="4" class="select-item"></td>
                 <td>1</td>
                 <td class="content-title">详解CSS中:nth-child的用法-大前端</td>
                 <td>255</td>
@@ -131,7 +131,7 @@
                 </td>
             </tr>
             <tr>
-                <td><input type="checkbox" class="celect-item"></td>
+                <td><input type="checkbox" name="5" class="select-item"></td>
                 <td>1</td>
                 <td class="content-title">详解CSS中:nth-child的用法-大前端</td>
                 <td>255</td>
@@ -144,7 +144,7 @@
                 </td>
             </tr>
             <tr>
-                <td><input type="checkbox" class="celect-item"></td>
+                <td><input type="checkbox" name="6" class="select-item"></td>
                 <td>1</td>
                 <td class="content-title">详解CSS中:nth-child的用法-大前端</td>
                 <td>255</td>
@@ -157,7 +157,7 @@
                 </td>
             </tr>
             <tr>
-                <td><input type="checkbox" class="celect-item"></td>
+                <td><input type="checkbox" name="7" class="select-item"></td>
                 <td>1</td>
                 <td class="content-title">详解CSS中:nth-child的用法-大前端</td>
                 <td>255</td>
@@ -170,7 +170,7 @@
                 </td>
             </tr>
             <tr>
-                <td><input type="checkbox" class="celect-item"></td>
+                <td><input type="checkbox" name="8" class="select-item"></td>
                 <td>1</td>
                 <td class="content-title">详解CSS中:nth-child的用法-大前端</td>
                 <td>255</td>
@@ -183,7 +183,7 @@
                 </td>
             </tr>
             <tr>
-                <td><input type="checkbox" class="celect-item"></td>
+                <td><input type="checkbox" name="9" class="select-item"></td>
                 <td>1</td>
                 <td class="content-title">详解CSS中:nth-child的用法-大前端</td>
                 <td>255</td>
@@ -198,7 +198,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <td class="copy-move" colspan="4">
+                <td class="copy-move" colspan="5">
                     <div class="form-group-inline">
                         <select name="pid" class="f">
                             <option value="1">== 选择栏目 ==</option>
@@ -216,10 +216,13 @@
                         </select>
                         <a class="gery" href="#">移动</a>
                         <a class="gery" href="#">复制</a>
+                        <a class="gery" href="#">发布</a>
+                        <a class="gery" href="#">草稿</a>
                         <a class="gery" href="#">删除</a>
+                        <div style="display: none;" class="selectTotal">已选中 <span> </span> 条数据</div>
                     </div>
                 </td>
-                <td colspan="3" class="total">
+                <td colspan="2" class="total">
                     共计 310 条数据 每页 15条 数据
                 </td>
             </tr>
@@ -248,5 +251,6 @@
             </tr>
         </tfoot>
     </table>
+    <script src="../js/index.js"></script>
 </body>
 </html>
